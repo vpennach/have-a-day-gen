@@ -11,7 +11,6 @@
     "generate-sql": "node scripts/generate-sql.js"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.49.4",
     "@types/node": "^22.15.3",
     "html2canvas": "^1.4.1",
     "react": "^19.0.0",

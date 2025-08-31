@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Sport, teams, stats, Team, StatOption } from '../data/sportsData';
+import { Sport, teams, stats } from '../data/sportsData';
 
 export default function Generator() {
   const { sport } = useParams<{ sport: string }>();
@@ -31,7 +31,13 @@ export default function Generator() {
 
   const handleDownload = async () => {
     // TODO: Implement image generation and download
-    console.log('Download functionality to be implemented');
+    console.log('Player Stats:', {
+      sport: currentSport,
+      team: selectedTeam,
+      player: playerStats.name,
+      number: playerStats.number,
+      stats: playerStats.stats.slice(0, numStats)
+    });
   };
 
   return (
@@ -127,8 +133,8 @@ export default function Generator() {
                       <input
                         type="text"
                         value={playerStats.stats[index]?.value || ''}
-                        onChange={(e) => handleStatChange(index, 'value', e.target.value)}
                         className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                        onChange={(e) => handleStatChange(index, 'value', e.target.value)}
                       />
                     </div>
                   </div>

@@ -1,11 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import LeagueButton from '../components/LeagueButton';
 import './HomePage.css';
 
 function HomePage() {
+  const navigate = useNavigate();
+
   const handleLeagueSelect = (league) => {
-    console.log(`Selected league: ${league}`);
-    // TODO: Navigate to team selection page
+    navigate(`/${league.toLowerCase()}`);
   };
 
   const leagues = ['NBA', 'NHL', 'MLB', 'NFL'];

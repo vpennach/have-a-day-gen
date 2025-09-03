@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import PlayerForm from '../components/PlayerForm';
+import GraphicPreview from '../components/GraphicPreview';
 import './LeaguePage.css';
 
 function NFLPage() {
+  const [formData, setFormData] = useState({});
+
+  const handleFormChange = (data) => {
+    setFormData(data);
+  };
+
   return (
     <div className="league-page">
       <header className="league-header">
@@ -20,7 +28,14 @@ function NFLPage() {
       </header>
       
       <main className="league-content">
-        <p>NFL team selection and graphic generation will go here.</p>
+        <div className="content-panels">
+          <div className="left-panel">
+            <PlayerForm league="NFL" onFormChange={handleFormChange} />
+          </div>
+          <div className="right-panel">
+            <GraphicPreview formData={formData} league="NFL" />
+          </div>
+        </div>
       </main>
     </div>
   );

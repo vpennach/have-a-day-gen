@@ -30,7 +30,7 @@ function NBAPage() {
       <main className="league-content">
         <div className="content-panels">
           <div className="left-panel">
-            <PlayerForm onFormChange={handleFormChange} />
+            <PlayerForm league="NBA" onFormChange={handleFormChange} />
           </div>
           <div className="right-panel">
             <GraphicPreview formData={formData} league="NBA" />

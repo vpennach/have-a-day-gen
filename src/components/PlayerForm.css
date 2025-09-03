@@ -2,7 +2,9 @@
   padding: 2rem;
   background-color: #1a1a1a;
   border-radius: 8px;
-  height: fit-content;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .player-form h2 {
@@ -11,6 +13,7 @@
   font-size: 1.5rem;
   border-bottom: 2px solid #444;
   padding-bottom: 0.5rem;
+  text-align: center;
 }
 
 .form-group {
@@ -22,9 +25,11 @@
   color: #ccc;
   margin-bottom: 0.5rem;
   font-weight: 500;
+  text-align: center;
 }
 
-.form-group input {
+.form-group input,
+.form-group select {
   width: 100%;
   padding: 0.75rem;
   border: 2px solid #444;
@@ -33,15 +38,48 @@
   color: white;
   font-size: 1rem;
   transition: border-color 0.3s ease;
+  text-align: center;
 }
 
-.form-group input:focus {
+/* Make number input much shorter */
+.form-group input[type="number"] {
+  width: 80px;
+  text-align: center;
+}
+
+/* Make stat count dropdown shorter */
+#statCount {
+  width: 120px;
+}
+
+/* Make team selection dropdown shorter */
+#team {
+  width: 200px;
+}
+
+/* Make player name input smaller */
+#playerName {
+  width: 250px;
+}
+
+/* Make player number input smaller */
+#playerNumber {
+  width: 200px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
   outline: none;
   border-color: #61dafb;
 }
 
 .form-group input::placeholder {
   color: #666;
+}
+
+.form-group select option {
+  background-color: #333;
+  color: white;
 }
 
 .stats-section {
@@ -54,4 +92,106 @@
   color: white;
   margin-bottom: 1.5rem;
   font-size: 1.2rem;
+  text-align: center;
+}
+
+.stat-fields-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.stat-field {
+  background-color: #222;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 0.6rem;
+  width: 150px;
+  height: 175px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat-field .form-group {
+  margin-bottom: 0.75rem;
+  width: 100%;
+  text-align: center;
+}
+
+.stat-field .form-group:last-child {
+  margin-bottom: 0;
+}
+
+.stat-field label {
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.stat-field input,
+.stat-field select {
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Stat count radio buttons */
+.stat-count-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stat-count-group label {
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.stat-count-options {
+  display: flex;
+  gap: 1rem;
+}
+
+.stat-count-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  margin-bottom: 0 !important;
+}
+
+.stat-count-option input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 2px solid #444;
+  background-color: #333;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.stat-count-option input[type="radio"]:checked {
+  background-color: #61dafb;
+  border-color: #61dafb;
+}
+
+.stat-count-option input[type="radio"]:checked::after {
+  content: '✓';
+  color: #282c34;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.stat-count-option span {
+  color: white;
+  font-weight: 500;
+  font-size: 1.1rem;
 }

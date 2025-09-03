@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB connection
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://username:password@cluster.mongodb.net/have-a-day-gen?retryWrites=true&w=majority';
+const MONGODB_URI = process.env.MONGODB_URI;
 let db;
 
 // Connect to MongoDB

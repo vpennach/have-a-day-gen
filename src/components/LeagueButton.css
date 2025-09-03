@@ -1,0 +1,56 @@
+/* Base button styles */
+.league-button {
+  padding: 2rem;
+  border: 3px solid #444;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.league-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border-color: #666;
+}
+
+.league-button:active {
+  transform: translateY(-2px);
+}
+
+/* Base shield styles */
+.league-button .shield {
+  object-fit: contain;
+}
+
+/* NBA Shield - Custom sizing */
+.league-button.nba .shield {
+  width: 200px;
+  height: 200px;
+}
+
+/* NHL Shield - Custom sizing */
+.league-button.nhl .shield {
+  width: 200px;
+  height: 130px;
+}
+
+/* MLB Shield - Custom sizing */
+.league-button.mlb .shield {
+  width: 150px;
+  height: 150px;
+}
+
+/* NFL Shield - Custom sizing */
+.league-button.nfl .shield {
+  width: 200px;
+  height: 125px;
+}

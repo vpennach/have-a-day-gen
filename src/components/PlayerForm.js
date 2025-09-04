@@ -7,6 +7,7 @@ function PlayerForm({ league, onFormChange }) {
     team: '',
     playerName: '',
     playerNumber: '',
+    nameFontSize: 88, // Default font size for player name
     statCount: 1,
     stats: []
   });
@@ -78,6 +79,19 @@ function PlayerForm({ league, onFormChange }) {
           onChange={(e) => handleInputChange('playerNumber', e.target.value)}
           placeholder="Enter jersey number"
         />
+      </div>
+
+      <div className="form-group">
+        <label htmlFor="nameFontSize">Name Font Size:</label>
+        <input
+          type="range"
+          id="nameFontSize"
+          min="40"
+          max="120"
+          value={formData.nameFontSize}
+          onChange={(e) => handleInputChange('nameFontSize', parseInt(e.target.value))}
+        />
+        <span className="font-size-display">{formData.nameFontSize}px</span>
       </div>
 
       <div className="stats-section">

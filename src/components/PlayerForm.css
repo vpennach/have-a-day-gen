@@ -195,3 +195,18 @@
   font-weight: 500;
   font-size: 1.1rem;
 }
+
+/* Font Size Slider Styling */
+#nameFontSize {
+  width: 200px;
+  margin: 0.5rem 0;
+}
+
+.font-size-display {
+  display: inline-block;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  color: #61dafb;
+  font-weight: bold;
+  min-width: 50px;
+}

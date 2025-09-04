@@ -36,3 +36,10 @@ The project is ready for you to begin building the application structure. You ca
 - Provide a clean, modern user experience
 - Support multiple sports leagues
 - Allow customization of generated content
+
+## Creating Fonts and Backgrounds 
+
+- https://www.gridiron-uniforms.com/GUD/controller/controller.php?action=main
+- fontforge.org
+- glyphrstudio.com
+- inkscape

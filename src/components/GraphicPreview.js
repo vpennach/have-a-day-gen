@@ -25,7 +25,7 @@ function GraphicPreview({ formData, league }) {
       // Draw background (black square for now)
       ctx.drawImage(background, 0, 0, size, size);
     };
-    background.src = '/assets/black-square.png';
+    background.src = '/assets/template-jersey-size.svg';
   }, []);
 
   return (
